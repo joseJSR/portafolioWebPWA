@@ -1,0 +1,325 @@
+/* You can add global styles to this file, and also import other style files */
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #2C3E50;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #18BC9C;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+}
+
+/* Estilos para la sección de introducción */
+.intro {
+    text-align: center;
+    background-color: #4D4D4D;
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    border-bottom: 3px solid #ddd;
+}
+
+.intro-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    /* color: #333; */
+    margin-bottom: 10px;
+}
+
+.intro-subtitle {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: white;
+    /* color: #555; */
+}
+
+
+/* Sección Hero */
+/* Sección Hero (Presentación) */
+.hero {
+    background-color: #4D4D4D;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.hero-text {
+    flex: 1;
+    padding-right: 2rem;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 61%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Botón */
+.btn {
+    padding: 0.8rem 2rem;
+    background-color: #18BC9C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #16A085;
+}
+
+/* Sección de Habilidades */
+.skills {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #2C3E50;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.skill-card {
+    background-color: #f4f4f4;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.skill-card p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Sección de Proyectos */
+.projects {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2C3E50;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: white;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px; /* Fijar un tamaño uniforme */
+    object-fit: cover; /* Mantener proporciones */
+    border-bottom: 2px solid #18BC9C;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #2C3E50;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Sección de Contacto */
+.contact {
+    padding: 4rem 2rem;
+    background-color: #2C3E50;
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #18BC9C;
+}
+
+.contact-form button {
+    padding: 1rem;
+    background-color: #18BC9C;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #16A085;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #2C3E50;
+    color: white;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .project-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
